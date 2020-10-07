@@ -1,7 +1,16 @@
 import { Octokit } from '@octokit/rest';
+import MarkdownIt from 'markdown-it';
+import fs from 'fs';
 
-export function cli(args) {
+export async function cli(args) {
   console.log('args', args);
+
+  const unreleasedMd = await fs.promises.readFile('UNRELEASED.md', 'utf8');
+  console.log('cli -> unreleasedMd', unreleasedMd);
+
+  const md = new MarkdownIt();
+  const result = md.parse(unreleasedMd);
+  console.log('cli -> result', result);
 
   const octokit = new Octokit();
 
