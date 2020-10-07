@@ -1,0 +1,29 @@
+{
+  "name": "unrelease",
+  "version": "0.0.1",
+  "description": "Add git changes to the UNRELEASED.md file",
+  "main": "src/index.js",
+  "bin": {
+    "@colcodev/unrelease": "bin/unrelease",
+    "unrelease": "bin/unrelease"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "git",
+    "unrelease"
+  ],
+  "repository": "git@github.com:colcodev/unrelease.git",
+  "author": "Mario Colque <colquemario@gmail.com>",
+  "license": "UNLICENSED",
+  "private": false,
+  "dependencies": {
+    "@octokit/rest": "^18.0.6",
+    "esm": "^3.2.25"
+  }
+}
